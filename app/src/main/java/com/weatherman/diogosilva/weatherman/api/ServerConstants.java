@@ -5,5 +5,10 @@ package com.weatherman.diogosilva.weatherman.api;
  */
 
 public class ServerConstants {
-    public static String DOMAIN = "http://apiadvisor.climatempo.com.br/api/v1/weather/";
+    public static String DOMAIN = "http://apiadvisor.climatempo.com.br/api/v1/";
+
+    public static String TOKEN_PARAM = "token";
+
+    //There are better ways to do this, JNI for example
+    public static String API_KEY = "a71a83ab6138d439d97347790325024c";
 }

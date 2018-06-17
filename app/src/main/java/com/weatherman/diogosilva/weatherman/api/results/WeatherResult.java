@@ -1,27 +1,35 @@
 package com.weatherman.diogosilva.weatherman.api.results;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by diogosilva on 15/06/18.
  */
 
-@AutoValue
-public abstract class WeatherResult{
+public class WeatherResult {
+    private int id;
+    private String name;
+    private String state;
+    private String country;
 
-    @SerializedName("as_of")
-    public abstract String asOf();
+    private Data data;
 
-    @SerializedName("created_at")
-    public abstract String createdAt();
 
-    @SerializedName("locations")
-    public abstract List<LocationsItem> locations();
+    public class Data{
 
-    @SerializedName("trends")
-    public abstract List<TrendsItem> trends();
+        private float temperature;
+        private String windDirection;
+        private String windVelocity;
+        private float humidity;
+        private String condition;
+        private String pressure;
+        private String icon;
+        private String sensation;
+        private String date;
 
-    public static TypeAdapter<TrendsResponse> typeAdapter(Gson gson) {
-        return new AutoValue_TrendsResponse.GsonTypeAdapter(gson);
     }
+
 }
+
+
